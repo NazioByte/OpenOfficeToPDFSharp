@@ -4,11 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class ConvertCompleteEventArgs
+namespace ZioByte.OpenOffice
 {
-    public string Status { get; set; } 
-    public ConvertCompleteEventArgs(string message)
+    public class ConvertCompleteEventArgs
     {
-        this.Status = message;
+        public string Status { get; set; }
+        public string FileName { get; set; }
+        public ConvertCompleteEventArgs(string filename, string message)
+        {
+            this.Status = message;
+            this.FileName = filename;
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Diagnostics;
 using System.ComponentModel;
 using System.IO;
+using System.Threading;
 
 namespace ZioByte.OpenOffice
 {
@@ -288,6 +289,8 @@ namespace ZioByte.OpenOffice
         /// The output worker.
         /// </summary>
         private BackgroundWorker outputWorker = new BackgroundWorker();
+
+     
         
         /// <summary>
         /// The error worker.

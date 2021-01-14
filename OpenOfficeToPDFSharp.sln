@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenOfficeToPDFSharp", "OpenOfficeToPDFSharp\OpenOfficeToPDFSharp.csproj", "{CA7A4E38-BB29-4CD1-977F-A8ECEB2309DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{48744B19-9589-4321-8D7A-5B1EE82B49D0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{CA7A4E38-BB29-4CD1-977F-A8ECEB2309DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA7A4E38-BB29-4CD1-977F-A8ECEB2309DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA7A4E38-BB29-4CD1-977F-A8ECEB2309DD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48744B19-9589-4321-8D7A-5B1EE82B49D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48744B19-9589-4321-8D7A-5B1EE82B49D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48744B19-9589-4321-8D7A-5B1EE82B49D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48744B19-9589-4321-8D7A-5B1EE82B49D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
