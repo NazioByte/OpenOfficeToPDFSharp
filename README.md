@@ -44,6 +44,7 @@ private void OfficeToPDF_ConvertComplete(object sender, ConvertCompleteEventArgs
 <li>.ppt</li>
 <li>.pptx</li>
 <li>.odp</li>  
+   <li>... and other if you want :) </li>  
   </ul>
 
 
