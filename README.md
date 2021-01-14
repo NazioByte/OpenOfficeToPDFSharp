@@ -28,10 +28,23 @@ private void OfficeToPDF_ConvertComplete(object sender, ConvertCompleteEventArgs
 ## File Extension Support
 
  <ul>
-    <li>2.1 Second Item Sub Item 1 </li>
-    <li>2.2 Second Item Sub Item 2</li>
-    <li>2.3 Second Item Sub Item 3</li>
-    </ul>
+  <li>.doc</li>
+<li>.docx</li>
+<li>.txt</li>
+<li>.rtf</li>
+<li>.html</li>
+<li>.htm</li>
+<li>.xml</li>
+<li>.wps</li>
+<li>.wpd</li>
+<li>.xls</li>
+<li>.xlsb</li>
+<li>.xlsx</li>
+<li>.ods</li>
+<li>.ppt</li>
+<li>.pptx</li>
+<li>.odp</li>  
+  </ul>
 
 
 ## Contributing
