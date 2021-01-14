@@ -1,7 +1,6 @@
 # OpenOfficeToPDFSharp
 
 Convert any Office document file extension to only PDF with included LibreOffice 3rd component inside.
- [![GitHub license](https://img.shields.io/github/license/shimat/opencvsharp.svg)](https://github.com/shimat/opencvsharp/blob/master/LICENSE) 
 
 
 ## 🔵 Usage
