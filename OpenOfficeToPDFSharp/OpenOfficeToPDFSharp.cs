@@ -34,14 +34,13 @@ namespace ZioByte.OpenOffice
 
         private void Process_OnProcessOutput(object sender, ProcessEventArgs args)
         {
-            var new_pdf_file = System.IO.Path.Combine(this.OutPutDir,  
+            var new_pdf_file = System.IO.Path.Combine(this.OutPutDir,
                 System.IO.Path.GetFileNameWithoutExtension
                 (this.SourcePath) + ".pdf");
 
-            if (args.Content.IndexOf("writer_pdf_Export") != -1)
+            if (args.Content == string.Empty)
             {
                 OnMessageReceived(new ConvertCompleteEventArgs(new_pdf_file, "Successs"));
-                process.StopProcess();
             }
         }
 
