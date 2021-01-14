@@ -20,7 +20,7 @@ static void Main()
 
 private void OfficeToPDF_ConvertComplete(object sender, ConvertCompleteEventArgs args)
 {
-   //Do something when convert to PDF complete 
+   //Do something when convert PDF to complete.
 }
 
 ```
