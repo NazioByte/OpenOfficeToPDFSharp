@@ -15,7 +15,7 @@ namespace ZioByte.OpenOffice
 
         private  string app_3rd_path = System.IO.Path.Combine(
             AppDomain.CurrentDomain.BaseDirectory,
-            @"dist\program", "soffice.exe");       
+            @"dist\program", "soffice");       
 
         public OpenOfficeToPDF()
         {
