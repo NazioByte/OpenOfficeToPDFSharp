@@ -32,5 +32,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## ♥️ License
-[![GitHub license](https://img.shields.io/github/license/shimat/opencvsharp.svg)](https://choosealicense.com/licenses/mit/) 
-
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
