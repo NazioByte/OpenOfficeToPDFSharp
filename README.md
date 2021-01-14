@@ -10,11 +10,11 @@ using ZioByte.OpenOffice;
 
 static void Main()
 {
-   OpenOfficeToPDF officeToPDF = new OpenOfficeToPDF("demo.docx",  @"\outputDir\");
+   OpenOfficeToPDF officeToPDF = new OpenOfficeToPDF();
 
    officeToPDF.ConvertComplete += OfficeToPDF_ConvertComplete;
 
-   officeToPDF.Convert();
+   officeToPDF.Convert("demo.docx",  @"\outputDir\");
 }
 
 
