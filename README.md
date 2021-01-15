@@ -18,16 +18,15 @@ static void Main()
    officeToPDF.Convert("demo.docx",  @"\outputDir\");
 }
 
-
-private void OfficeToPDF_ConvertComplete(object sender, ConvertCompleteEventArgs args)
-{
-   //Do something when convert PDF to complete.
-}
-
 private void OfficeToPDF_ConvertStatusChange(object sender, ConvertStatusChangeEventArgs args)
 {
     Console.WriteLine(args.FileName + "," + args.Status);
     // Or do something if you want.
+}
+
+private void OfficeToPDF_ConvertComplete(object sender, ConvertCompleteEventArgs args)
+{
+   //Do something when convert PDF to complete.
 }
 
 ```
