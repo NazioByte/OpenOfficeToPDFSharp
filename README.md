@@ -15,11 +15,11 @@ static void Main()
    officeToPDF.ConvertStatusChange += OfficeToPDF_ConvertStatusChange;
    officeToPDF.ConvertComplete += OfficeToPDF_ConvertComplete;   
 
-   officeToPDF.Set(@"demo1.docx", @"\OutputDir\");
-   officeToPDF.Set(@"demo2.docx", @"\OutputDir\");
-   officeToPDF.Set(@"demo3.docx", @"\OutputDir\");
-   officeToPDF.Set(@"demo4.docx", @"\OutputDir\");
-   officeToPDF.Set(@"demo5.docx", @"\OutputDir\");
+   officeToPDF.Set(@"Simple1.docx", @"\OutputDir\");
+   officeToPDF.Set(@"Simple2.docx", @"\OutputDir\");
+   officeToPDF.Set(@"Simple3.docx", @"\OutputDir\");
+   officeToPDF.Set(@"Simple4.docx", @"\OutputDir\");
+   officeToPDF.Set(@"Simple5.docx", @"\OutputDir\");
    
    officeToPDF.Convert();
 }
