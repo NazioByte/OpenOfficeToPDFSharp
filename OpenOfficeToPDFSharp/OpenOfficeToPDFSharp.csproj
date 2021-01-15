@@ -47,6 +47,7 @@
     <Compile Include="class\ProcessEventArgs.cs" />
     <Compile Include="class\ProcessInterface.cs" />
     <Compile Include="event\ConvertCompleteEventArgs.cs" />
+    <Compile Include="event\ConvertStatusChangeEventArgs.cs" />
     <Compile Include="OpenOfficeToPDFSharp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

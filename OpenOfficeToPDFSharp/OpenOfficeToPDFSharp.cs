@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ZioByte.OpenOffice
 {
@@ -10,47 +8,84 @@ namespace ZioByte.OpenOffice
     {
         private ProcessInterface process = new ProcessInterface();
 
-        private string SourcePath { get; set; }
-        private string OutPutDir { get; set; }
+        private const string STR_PDF_EXPORT = "writer_pdf_Export";
+        private const string STR_PDF_OVERWRITE = "Overwriting";
 
-        private  string app_3rd_path = System.IO.Path.Combine(
+        private StringBuilder bf;
+        private IList<string> cmd = new List<string>();
+
+        private string app_3rd_path = System.IO.Path.Combine(
             AppDomain.CurrentDomain.BaseDirectory,
-            @"dist\program", "soffice.exe");       
+            @"dist\program", "soffice");
 
         public OpenOfficeToPDF()
         {
             process.OnProcessOutput += Process_OnProcessOutput;
         }
 
-        public void Convert(string sourcePath, string outputDirectory)
+        public void Set(string sourcePath, string outputDirectory)
         {
             var app_args = $"--headless -convert-to pdf {sourcePath} --outdir {outputDirectory}";
 
-            this.SourcePath = sourcePath;
-            this.OutPutDir = outputDirectory;
+            cmd.Add($"{app_3rd_path} {app_args}");
+        }
 
-            process.StartProcess(app_3rd_path, app_args);
+        public void Convert()
+        {
+            bf = new StringBuilder();
+
+            foreach (string content in cmd)
+            {
+                bf.Append(content + " && ");
+            }
+
+            var str_result_conv = "/C " + bf.ToString().Remove(bf.ToString().Length - 3);
+
+            Console.WriteLine(str_result_conv);
+
+            process.StartProcess("cmd.exe", str_result_conv);
         }
 
         private void Process_OnProcessOutput(object sender, ProcessEventArgs args)
         {
-            var new_pdf_file = System.IO.Path.Combine(this.OutPutDir,  
-                System.IO.Path.GetFileNameWithoutExtension
-                (this.SourcePath) + ".pdf");
-
-            if (args.Content.IndexOf("writer_pdf_Export") != -1)
+            if (args.Content.IndexOf(STR_PDF_EXPORT) != -1)
             {
-                OnMessageReceived(new ConvertCompleteEventArgs(new_pdf_file, "Successs"));
-                process.StopProcess();
+                var temp_filename = args.Content.Split(new char[] { '-', '>' }, StringSplitOptions.RemoveEmptyEntries);
+
+                var filename_pdf = temp_filename[1].Replace("using filter : writer_pdf_Export", "").Replace("Overwriting: ", "").Trim();
+
+                OnMessageReceived(new ConvertStatusChangeEventArgs(filename_pdf, "Writing"));
+            }
+
+            if (args.Content.IndexOf(STR_PDF_OVERWRITE) != -1)
+            {
+                var temp_filename = args.Content.Replace("Overwriting: ", "").Trim();
+
+                OnMessageReceived(new ConvertStatusChangeEventArgs(temp_filename, STR_PDF_OVERWRITE));
+            }
+
+            if (args.Content == string.Empty)
+            {
+                OnMessageReceived(new ConvertCompleteEventArgs(true));
             }
         }
 
         public delegate void ConvertCompleteEventHandler(object sender, ConvertCompleteEventArgs args);
+        public delegate void ConvertStatusChangeEventHandler(object sender, ConvertStatusChangeEventArgs args);
+
         public event ConvertCompleteEventHandler ConvertComplete;
+        public event ConvertStatusChangeEventHandler ConvertStatusChange;
+
         protected virtual void OnMessageReceived(ConvertCompleteEventArgs args)
         {
             if (ConvertComplete != null)
                 ConvertComplete(this, args);
+        }
+
+        protected virtual void OnMessageReceived(ConvertStatusChangeEventArgs args)
+        {
+            if (ConvertStatusChange != null)
+                ConvertStatusChange(this, args);
         }
 
     }
