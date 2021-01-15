@@ -1,6 +1,6 @@
 # OpenOfficeToPDFSharp
 
-Convert any Office document file extension to only PDF.
+Convert any Office document file extension to only PDF without Interop.
 
 ## 🔵 Usage
 
