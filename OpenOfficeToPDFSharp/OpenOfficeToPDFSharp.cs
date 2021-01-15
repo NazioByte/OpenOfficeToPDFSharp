@@ -44,8 +44,6 @@ namespace ZioByte.OpenOffice
 
             var str_result_conv = "/C " + bf.ToString().Remove(bf.ToString().Length - 3);
 
-            Console.WriteLine(str_result_conv);
-
             process.StartProcess("cmd.exe", str_result_conv);
         }
 
