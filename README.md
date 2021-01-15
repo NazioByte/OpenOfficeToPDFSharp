@@ -1,6 +1,6 @@
 # OpenOfficeToPDFSharp
 
-Convert any Office document file extension to only PDF.
+Convert any Office document file extension to only PDF without Interop.
 
 ## 🔵 Usage
 
@@ -54,4 +54,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## ♥️ License
- [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+ [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)

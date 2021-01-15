@@ -16,7 +16,11 @@ namespace ZioByte.OpenOffice
 
         private string app_3rd_path = System.IO.Path.Combine(
             AppDomain.CurrentDomain.BaseDirectory,
+<<<<<<< HEAD
             @"dist\program", "soffice");
+=======
+            @"dist\program", "soffice");       
+>>>>>>> 4ee2914ab7c53373acf2ac5b813f8b43762a83e6
 
         public OpenOfficeToPDF()
         {
@@ -48,6 +52,7 @@ namespace ZioByte.OpenOffice
 
         private void Process_OnProcessOutput(object sender, ProcessEventArgs args)
         {
+<<<<<<< HEAD
             if (args.Content.IndexOf(STR_PDF_EXPORT) != -1)
             {
                 var temp_filename = args.Content.Split(new char[] { '-', '>' }, StringSplitOptions.RemoveEmptyEntries);
@@ -67,6 +72,15 @@ namespace ZioByte.OpenOffice
             if (args.Content == string.Empty)
             {
                 OnMessageReceived(new ConvertCompleteEventArgs(true));
+=======
+            var new_pdf_file = System.IO.Path.Combine(this.OutPutDir,
+                System.IO.Path.GetFileNameWithoutExtension
+                (this.SourcePath) + ".pdf");
+
+            if (args.Content == string.Empty)
+            {
+                OnMessageReceived(new ConvertCompleteEventArgs(new_pdf_file, "Successs"));
+>>>>>>> 4ee2914ab7c53373acf2ac5b813f8b43762a83e6
             }
         }
 
