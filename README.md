@@ -1,9 +1,9 @@
 # OpenOfficeToPDFSharp
 
-Convert any Office document file extension to only PDF without Interop.
-
  [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)
 
+
+Convert any Office document file extension to only PDF without Interop.
 
 ## Install from Nuget
 
