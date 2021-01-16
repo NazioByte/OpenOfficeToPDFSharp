@@ -2,6 +2,10 @@
 
 Convert any Office document file extension to only PDF without Interop.
 
+## Nuget
+
+https://img.shields.io/nuget/dt/ZioByte.OpenOffice.PDFConverter?style=for-the-badge
+
 ## 🔵 Usage
 
 ```csharp
@@ -36,6 +40,8 @@ private void OfficeToPDF_ConvertComplete(object sender, ConvertCompleteEventArgs
 }
 
 ```
+
+
 
 ## File Extension Support
 
