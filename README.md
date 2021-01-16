@@ -5,9 +5,7 @@ Convert any Office document file extension to only PDF without Interop.
 
 ## Install from Nuget
 
-<a href="https://www.nuget.org/packages/ZioByte.OpenOffice.PDFConverter/"><img alt="Nuget" src="https://img.shields.io/nuget/dt/ZioByte.OpenOffice.PDFConverter?style=for-the-badge"></a>
-
-
+ 
 
 ## 🔵 Usage
 
