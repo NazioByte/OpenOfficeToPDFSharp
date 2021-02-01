@@ -6,7 +6,6 @@
 Convert any Office document file extension to only PDF without Interop.
 
 ## ~~Install from Nuget ~~ 
-Coming soon.....
 
 ## 🔵 Usage
 
